@@ -3,7 +3,7 @@
         <div class="card-block">
             <h4 class="card-title">Delivery</h4>
             <p class="card-text">
-                Some example text.
+                We deliver our pizza straight to you via our DeLorean time machine for speedy delivery!
             </p>
         </div>
     </div>
