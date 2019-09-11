@@ -68,7 +68,7 @@ export default {
     components: {
         apNewPizza: NewPizza,
         apLogin: Login
-    }   
+    }
 }
 </script>
 

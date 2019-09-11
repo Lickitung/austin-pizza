@@ -15,7 +15,10 @@ Vue.use(VueRouter)
 const routes = [
   { path: '/', name: 'homeLink', component: Home },
   { path: '/menu', name: 'menuLink', component: Menu },
-  { path: '/admin', name: 'adminLink', component: Admin},
+  { path: '/admin', name: 'adminLink', component: Admin, beforeEnter: (to, from, next) => {
+    alert('This area is for authorized users only. Please login to continue.');
+    next();  
+  }},
   { path: '/about', name: 'aboutLink', component: About, children: [
       { path: '/contact', name: 'contactLink', component: Contact },
       { path: '/history', name: 'historyLink', component: History },
@@ -27,8 +30,15 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  mode: 'history'
-})
+  mode: 'history',
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
+});
 
 new Vue({
   el: '#app',
