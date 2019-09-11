@@ -4,7 +4,7 @@
       <ap-header/>
     </div>
     <div class="container">
-      <ap-menu/>
+      <ap-admin/>
     </div>
     <div class="container">
       <ap-footer/>
@@ -17,13 +17,15 @@ import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import Home from './components/Home.vue'
 import Menu from './components/Menu.vue'
+import Admin from './components/Admin.vue'
 
 export default {
   components: {
     apHeader: Header,
     apFooter: Footer,
     apHome: Home,
-    apMenu: Menu 
+    apMenu: Menu,
+    apAdmin: Admin 
   }
 }
 </script>
