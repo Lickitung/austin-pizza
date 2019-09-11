@@ -2,7 +2,7 @@
     <div>
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <!-- new pizza component -->
+                <ap-new-pizza></ap-new-pizza>
             </div>
             <div class="col-sm-12 col-md-6">
                 <h3>Menu: </h3>
@@ -55,9 +55,13 @@
 </template>
 
 <script>
-    export default {
-        
-    }
+import NewPizza from './NewPizza.vue'
+
+export default {
+    components: {
+        apNewPizza: NewPizza
+    }   
+}
 </script>
 
 <style coped>
