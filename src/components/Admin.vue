@@ -95,6 +95,8 @@ export default {
 }
 </script>
 
-<style coped>
-
+<style scoped>
+    .order-number {
+        margin: 10px 0
+    }
 </style>

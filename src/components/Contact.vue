@@ -2,7 +2,6 @@
     <div class="card">
         <div class="card-block">
             <h4 class="card-title">Contact</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
             <p class="card-text">
                 <address>
                     <strong>Austin Pizza</strong><br>
