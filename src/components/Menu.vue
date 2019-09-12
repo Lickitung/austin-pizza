@@ -53,7 +53,7 @@
                 <button class="btn btn-success btn-block" @click="addNewOrder">Place Order</button>
             </div>
             <div v-else>
-                <p>{{basketText}} <br> {{this.$store.state.orders}}</p>
+                <p>{{basketText}}</p>
             </div>
         </div>
     </div>
