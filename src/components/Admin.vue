@@ -13,9 +13,9 @@
                             <th>Remove from menu</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody v-for="item in getMenuItems" :key=item.size>
                         <tr>
-                            <td>Margherita</td>
+                            <td>{{item.name}}</td>
                             <td><button class="btn btn-outline-danger btn-sm">x</button></td>
                         </tr>
                     </tbody>
@@ -24,7 +24,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <h3>Current orders:</h3>
+                <h3>Current orders: {{numberOfOrders}}</h3>
                 <table class="table table-hover">
                     <thead class="thead-default">
                         <tr>
@@ -68,6 +68,14 @@ export default {
     components: {
         apNewPizza: NewPizza,
         apLogin: Login
+    },
+    computed: {
+        getMenuItems() {
+            return this.$store.state.menuItems
+        },
+        numberOfOrders() {
+            return this.$store.getters.numberOfOrders
+        }
     }
 }
 </script>
