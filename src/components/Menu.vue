@@ -61,6 +61,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { dbOrdersRef } from '../firebaseConfig'
 
     export default {
         data() {
@@ -96,7 +97,8 @@ import { mapGetters } from 'vuex'
                 this.basket.splice(this.basket.indexOf(item), 1);
             },
             addNewOrder() {
-                this.$store.commit('addOrder', this.basket)
+                // this.$store.commit('addOrder', this.basket)
+                dbOrdersRef.push(this.basket)
                 this.basket = []
                 this.basketText = "Thank you, your order has been placed! :)"
             }
